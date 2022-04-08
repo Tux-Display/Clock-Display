@@ -30,9 +30,6 @@ class ClockForSchoolDieWantIi(MycroftSkill):
         #Verteld de gebruiker na het activeren van clock command dat de klok op gaat starten
         self.speak_dialog('ii.want.die.school.for.clock')
 
-        ##Eig. moet pi altijd in desktop env. opstarten
-        ##en dan standaard klok
-
         #chrome browser voor de klok
         chrome_options = Options()
 
