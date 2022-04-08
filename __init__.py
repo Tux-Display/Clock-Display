@@ -32,8 +32,10 @@ class ClockForSchoolDieWantIi(MycroftSkill):
         chrome_options.add_argument("--kiosk")
         chrome_options.add_argument("--start-maximized")
         chrome_options.add_argument("--disable-password-manager-reauthentication")
+        chrome_options.AddArguments("--disable-extensions");
+        chrome_options.AddArguments("--disable-application-cache");
         driver = webdriver.Chrome(chrome_options=chrome_options)
-        driver.get("http://google.com") ##point naar html klokje
+        driver.get("/home/pi/mycroft-core/skills/X-man-homescreen-css/index.html") ##point naar html klokje
 
 #verteld aan mycroft de juiste function name voor deze skill
 def create_skill():
