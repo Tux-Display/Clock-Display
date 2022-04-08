@@ -31,11 +31,10 @@ class ClockForSchoolDieWantIi(MycroftSkill):
         #chrome browser voor de klok
         chrome_options = Options()
 
-        # chromeOptions.AddAdditionalCapability("useAutomationExtension", false);
-        # chromeOptions.AddExcludedArgument("enable-automation"); 
 
-        chrome_options.add_argument("useAutomationExtension")
-        chrome_options.add_argument("enable-automation")
+        chrome_options.add_experimental_option("useAutomationExtension", False)
+        chrome_options.add_experimental_option("excludeSwitches",["enable-automation"])
+
 
         chrome_options.add_argument("--kiosk")
         chrome_options.add_argument("--disable-application-cache")
