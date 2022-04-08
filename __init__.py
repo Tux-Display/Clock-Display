@@ -35,7 +35,7 @@ class ClockForSchoolDieWantIi(MycroftSkill):
         # chrome_options.add_argument("--disable-extensions");
         chrome_options.add_argument("--disable-application-cache");
         driver = webdriver.Chrome(chrome_options=chrome_options)
-        driver.get("file:///home/pi/mycroft-core/skills/X-man-homescreen-css/index.html") ##point naar html klokje
+        driver.get("file://home/pi/mycroft-core/skills/X-man-homescreen-css/index.html") ##point naar html klokje
 
 #verteld aan mycroft de juiste function name voor deze skill
 def create_skill():
