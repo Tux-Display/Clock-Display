@@ -8,6 +8,11 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 
+## NOTES
+## wat nou als we de driver variable blok stuk alles globaal maken, ergens in mycroft gedifned
+## dan kunnen we, wanneer we een skill callen, de driver page veranderen (?)
+## fking kut selenium
+
 
 class ClockForSchoolDieWantIi(MycroftSkill):
     def __init__(self):
@@ -36,7 +41,6 @@ class ClockForSchoolDieWantIi(MycroftSkill):
         chrome_options.add_experimental_option("excludeSwitches",["enable-automation"])
 
         # chrome kios mode -> geen functies zodat de gebruiker niks kan doen
-        # chrome_options.add_argument("--headless")
         chrome_options.add_argument("--kiosk")
         chrome_options.add_argument("--disable-application-cache")
         chrome_options.add_argument("disable-infobars")
