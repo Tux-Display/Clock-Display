@@ -5,6 +5,7 @@ from mycroft import MycroftSkill, intent_file_handler
 ##pip install nog?
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 
 
 class ClockForSchoolDieWantIi(MycroftSkill):
@@ -31,7 +32,7 @@ class ClockForSchoolDieWantIi(MycroftSkill):
         chrome_options.add_argument("--kiosk")
         chrome_options.add_argument("--start-maximized")
         chrome_options.add_argument("--disable-password-manager-reauthentication")
-        river = webdriver.Chrome(chrome_options=chrome_options)
+        driver = webdriver.Chrome(chrome_options=chrome_options)
         driver.get("http://google.com") ##point naar html klokje
 
 #verteld aan mycroft de juiste function name voor deze skill
