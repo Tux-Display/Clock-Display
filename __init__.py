@@ -30,10 +30,8 @@ class ClockForSchoolDieWantIi(MycroftSkill):
         #chrome browser voor de klok
         chrome_options = Options()
         chrome_options.add_argument("--kiosk")
-        # chrome_options.add_argument("--start-maximized")
-        # chrome_options.add_argument("--disable-password-manager-reauthentication")
-        # chrome_options.add_argument("--disable-extensions");
-        chrome_options.add_argument("--disable-application-cache");
+        chrome_options.add_argument("--disable-application-cache")
+        chrome_options.add_argument("disable-infobars")
         driver = webdriver.Chrome(chrome_options=chrome_options)
         driver.get("file:///opt/mycroft/skills/X-man-homescreen-css/index.html") ##point naar html klokje
 
