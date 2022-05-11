@@ -1,11 +1,11 @@
 #Het includen/invoegen van benodigden libraries
 
 # from calendar import c
-import os
+# import os
 from mycroft import MycroftSkill, intent_file_handler
 
 
-print(os.system("cat /proc/self/environ"))
+# print(os.system("cat /proc/self/environ"))
 
 ## NOTES
 ## wat nou als we de driver variable blok stuk alles globaal maken, ergens in mycroft gedifned
