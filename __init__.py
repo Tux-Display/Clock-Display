@@ -29,8 +29,8 @@ def create_skill():
     
     # maakt listener aan die checkt wanneer het bestand voor de homescreen change veranderd
     os.system('mkdir /tmp/.homescreenskilldata/ 2>/dev/null')
-    os.system("rm -rf /tmp/.homescreenskilldata/page.txt")
-    os.system("touch /tmp/.homescreenskilldata/page.txt; sleep 2")
+    # os.system("rm -rf /tmp/.homescreenskilldata/page.txt")
+    # os.system("touch /tmp/.homescreenskilldata/page.txt; sleep 2")
     os.system("echo \"\" > /tmp/.homescreenskilldata/page.txt")
     os.system('python3 /opt/mycroft/skills/clock-for-school-die-want-ii-skill/screenChanger.py >> /tmp/.homescreenskilldata/fileChecker.log &')
     return ClockForSchoolDieWantIi()
