@@ -20,7 +20,7 @@ driver = webdriver.Chrome(options=chrome_options)
 while True:
     oude = ""
     driver.get("file:///opt/mycroft/skills/X-man-homescreen-css/homescreen.html")
-    with open('/opt/page.txt') as f:
+    with open('/tmp/.homescreenskilldata/page.txt') as f:
         file = f.read()
         if(file == "homescreen" and oude != "homescreen"):
             oude = "homescreen"
