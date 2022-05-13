@@ -21,11 +21,13 @@ while True:
     oude = ""
     # shutdowncheck = True
     driver.get("file:///opt/mycroft/skills/X-man-homescreen-css/homescreen.html")
-    bestandsInhoud = open("/opt/page.txt", 'r').read()
-    if(bestandsInhoud == "homescreen" and oude != "homescreen"):
-        oude = "homescreen"
-        driver.get("file:///opt/mycroft/skills/X-man-homescreen-css/homescreen.html")
-    if(bestandsInhoud == "clock" and oude != "clock"):
-        oude = "clock"
-        driver.get("file:///opt/mycroft/skills/X-man-homescreen-css/clock.html")
-    bestandsInhoud.close()
+    # file = open("/opt/page.txt", 'r').read()
+    with open('readme.txt') as f:
+        file = f.read()
+        if(file == "homescreen" and oude != "homescreen"):
+            oude = "homescreen"
+            driver.get("file:///opt/mycroft/skills/X-man-homescreen-css/homescreen.html")
+        if(file == "clock" and oude != "clock"):
+            oude = "clock"
+            driver.get("file:///opt/mycroft/skills/X-man-homescreen-css/clock.html")
+    # file.close()
