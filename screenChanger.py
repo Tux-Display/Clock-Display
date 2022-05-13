@@ -22,10 +22,10 @@ while True:
     # shutdowncheck = True
     driver.get("file:///opt/mycroft/skills/X-man-homescreen-css/homescreen.html")
     bestandsInhoud = open("/opt/page.txt", 'r').read()
-    if(bestandsInhoud == "homescreen" & oude != "homescreen"):
+    if(bestandsInhoud == "homescreen" and oude != "homescreen"):
         oude = "homescreen"
         driver.get("file:///opt/mycroft/skills/X-man-homescreen-css/homescreen.html")
-    if(bestandsInhoud == "clock" & oude != "clock"):
+    if(bestandsInhoud == "clock" and oude != "clock"):
         oude = "clock"
         driver.get("file:///opt/mycroft/skills/X-man-homescreen-css/clock.html")
     bestandsInhoud.close()
