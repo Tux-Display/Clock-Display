@@ -10,9 +10,9 @@ chrome_options = Options()
 chrome_options.add_experimental_option("useAutomationExtension", False)
 chrome_options.add_experimental_option("excludeSwitches",["enable-automation"])
 # chrome kios mode -> geen functies zodat de gebruiker niks kan doen
-chrome_options.add_argument("--kiosk")
-chrome_options.add_argument("--disable-application-cache")
-chrome_options.add_argument("disable-infobars")
+# chrome_options.add_argument("--kiosk")
+# chrome_options.add_argument("--disable-application-cache")
+# chrome_options.add_argument("disable-infobars")
 driver = webdriver.Chrome(options=chrome_options)
 # open home pagina
 
