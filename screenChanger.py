@@ -22,6 +22,9 @@ while True:
     # driver.get("file:///opt/mycroft/skills/X-man-homescreen-css/homescreen.html")
     with open('/tmp/.homescreenskilldata/page.txt') as f:
         file = f.read()
+        if (file == ""):
+            oude = "homescreen"
+            driver.get("file:///opt/mycroft/skills/X-man-homescreen-css/homescreen.html")
         if(file == "homescreen" and oude != "homescreen"):
             oude = "homescreen"
             driver.get("file:///opt/mycroft/skills/X-man-homescreen-css/homescreen.html")
