@@ -21,7 +21,7 @@ driver = webdriver.Chrome(options=chrome_options)
 from pathlib import Path
 Path('/tmp/.homescreenskilldata/page.txt').touch()
 import os
-os.system("/tmp/.homescreenskilldata/")
+os.system("mkdir /tmp/.homescreenskilldata/")
 
 while True:
     oude = ""
