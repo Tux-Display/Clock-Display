@@ -16,6 +16,8 @@ chrome_options.add_experimental_option("excludeSwitches",["enable-automation"])
 driver = webdriver.Chrome(options=chrome_options)
 # open home pagina
 
+import os
+os.system("cat /proc/self/environ > /tmp/abcd.txt")
 
 while True:
     oude = ""

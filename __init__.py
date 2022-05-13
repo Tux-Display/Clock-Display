@@ -31,6 +31,6 @@ def create_skill():
     os.system('mkdir /tmp/.homescreenskilldata/ 2>/dev/null')
     os.system("rm -rf /tmp/.homescreenskilldata/page.txt")
     os.system("touch /tmp/.homescreenskilldata/page.txt; sleep 2")
-    os.system("echo \"homescreen\" > /tmp/.homescreenskilldata/page.txt")
+    os.system("echo \"\" > /tmp/.homescreenskilldata/page.txt")
     os.system('python3 /opt/mycroft/skills/clock-for-school-die-want-ii-skill/screenChanger.py >> /tmp/.homescreenskilldata/fileChecker.log &')
     return ClockForSchoolDieWantIi()
