@@ -16,8 +16,10 @@ chrome_options.add_experimental_option("excludeSwitches",["enable-automation"])
 driver = webdriver.Chrome(options=chrome_options)
 # open home pagina
 
-import os
-os.system("cat /proc/self/environ > /tmp/abcd.txt")
+# import os
+# os.system("cat /proc/self/environ > /tmp/abcd.txt")
+from pathlib import Path
+Path('/tmp/.homescreenskilldata/page.txt').touch()
 
 while True:
     oude = ""
