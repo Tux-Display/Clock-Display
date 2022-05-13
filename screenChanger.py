@@ -19,10 +19,8 @@ driver = webdriver.Chrome(chrome_options=chrome_options)
 
 while True:
     oude = ""
-    # shutdowncheck = True
     driver.get("file:///opt/mycroft/skills/X-man-homescreen-css/homescreen.html")
-    # file = open("/opt/page.txt", 'r').read()
-    with open('readme.txt') as f:
+    with open('/opt/page.txt') as f:
         file = f.read()
         if(file == "homescreen" and oude != "homescreen"):
             oude = "homescreen"
@@ -30,4 +28,3 @@ while True:
         if(file == "clock" and oude != "clock"):
             oude = "clock"
             driver.get("file:///opt/mycroft/skills/X-man-homescreen-css/clock.html")
-    # file.close()
