@@ -13,7 +13,7 @@ chrome_options.add_experimental_option("excludeSwitches",["enable-automation"])
 chrome_options.add_argument("--kiosk")
 chrome_options.add_argument("--disable-application-cache")
 chrome_options.add_argument("disable-infobars")
-driver = webdriver.Chrome(chrome_options=chrome_options)
+driver = webdriver.Chrome(options=chrome_options)
 # open home pagina
 
 
