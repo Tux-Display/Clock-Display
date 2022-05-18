@@ -9,6 +9,7 @@ chrome_options = Options()
 # Verwijderd infobars -> bar die liet weten dat het automated was
 chrome_options.add_experimental_option("useAutomationExtension", False)
 chrome_options.add_experimental_option("excludeSwitches",["enable-automation"])
+chrome_options.add_argument("--no-sandbox")
 # chrome kios mode -> geen functies zodat de gebruiker niks kan doen
 # chrome_options.add_argument("--kiosk")
 # chrome_options.add_argument("--disable-application-cache")
