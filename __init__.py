@@ -7,15 +7,12 @@ from mycroft import MycroftSkill, intent_file_handler
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
-
-## NOTES
-## wat nou als we de driver variable blok stuk alles globaal maken, ergens in mycroft gedifned
-## dan kunnen we, wanneer we een skill callen, de driver page veranderen (?)
-## fking kut selenium
-
+import os
 
 class ClockForSchoolDieWantIi(MycroftSkill):
     print("FDGHJKFGHFHJKHGFHJKHGFDFGHJKJHGFDFGHJKJHGFDFGHJKLJHGFDFGHJKLJHGFDGHJKHGFGHJK")
+
+    os.system("cd ~/mycroft-core/; . venv-activate.sh")    
     
      #chrome browser voor de klok
     chrome_options = Options()
@@ -25,7 +22,7 @@ class ClockForSchoolDieWantIi(MycroftSkill):
     chrome_options.add_experimental_option("excludeSwitches",["enable-automation"])
 
     # chrome kios mode -> geen functies zodat de gebruiker niks kan doen
-    # chrome_options.add_argument("--kiosk")
+    chrome_options.add_argument("--kiosk")
     chrome_options.add_argument("--disable-application-cache")
     chrome_options.add_argument("disable-infobars")
     driver = webdriver.Chrome(chrome_options=chrome_options)
