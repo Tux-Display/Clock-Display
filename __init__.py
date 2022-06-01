@@ -28,7 +28,7 @@ class ClockForSchoolDieWantIi(MycroftSkill):
     driver = webdriver.Chrome(chrome_options=chrome_options)
 
     # open home pagina
-    driver.get("file:///opt/mycroft/skills/X-man-homescreen-css/homescreen.html")
+    driver.get("file:///opt/mycroft/skills/Homescreen/homescreen.html")
     
     
     def __init__(self):
