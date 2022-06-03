@@ -10,27 +10,29 @@ from webdriver_manager.chrome import ChromeDriverManager
 import os
 
 class ClockForSchoolDieWantIi(MycroftSkill):
-    print("FDGHJKFGHFHJKHGFHJKHGFDFGHJKJHGFDFGHJKJHGFDFGHJKLJHGFDFGHJKLJHGFDGHJKHGFGHJK")
 
-    os.system(". ~/mycroft-core/venv-activate.sh")    
+    def meeLuisterFunction():
+        
     
-     #chrome browser voor de klok
-    chrome_options = Options()
+         #chrome browser voor de klok
+        chrome_options = Options()
 
-    # Verwijderd infobars -> bar die liet weten dat het automated was
-    chrome_options.add_experimental_option("useAutomationExtension", False)
-    chrome_options.add_experimental_option("excludeSwitches",["enable-automation"])
+        # Verwijderd infobars -> bar die liet weten dat het automated was
+        chrome_options.add_experimental_option("useAutomationExtension", False)
+        chrome_options.add_experimental_option("excludeSwitches",["enable-automation"])
 
-    # chrome kios mode -> geen functies zodat de gebruiker niks kan doen
-    chrome_options.add_argument("--kiosk")
-    chrome_options.add_argument("--disable-application-cache")
-    chrome_options.add_argument("disable-infobars")
-    driver = webdriver.Chrome(chrome_options=chrome_options)
-    driver.quit()
-    driver = webdriver.Chrome(chrome_options=chrome_options)
+        # chrome kios mode -> geen functies zodat de gebruiker niks kan doen
+        chrome_options.add_argument("--kiosk")
+        chrome_options.add_argument("--disable-application-cache")
+        chrome_options.add_argument("disable-infobars")
+        driver = webdriver.Chrome(chrome_options=chrome_options)
+        driver.quit()
+        driver = webdriver.Chrome(chrome_options=chrome_options)
 
-    # open home pagina
-    driver.get("file:///opt/mycroft/skills/Homescreen/homescreen.html")
+        # open home pagina
+        driver.get("file:///opt/mycroft/skills/Homescreen/homescreen.html")
+        
+    meeLuisterFunction()
     
     
     def __init__(self):
@@ -44,7 +46,7 @@ class ClockForSchoolDieWantIi(MycroftSkill):
 
     #de functie die mycroft runt wanneer de gebruiker erom gevraagd heeft
     def handle_ii_want_die_school_for_clock(self, message):
-
+        meeLuisterFunction()
         #Verteld de gebruiker na het activeren van clock command dat de klok op gaat starten
         self.speak_dialog('ii.want.die.school.for.clock')
 
