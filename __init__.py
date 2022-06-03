@@ -9,10 +9,12 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 import os
 
-def meeLuisterFunction():
-        
+class ClockForSchoolDieWantIi(MycroftSkill):
+    print("FDGHJKFGHFHJKHGFHJKHGFDFGHJKJHGFDFGHJKJHGFDFGHJKLJHGFDFGHJKLJHGFDGHJKHGFGHJK")
+
+    os.system(". ~/mycroft-core/venv-activate.sh")    
     
-    #chrome browser voor de klok
+     #chrome browser voor de klok
     chrome_options = Options()
 
     # Verwijderd infobars -> bar die liet weten dat het automated was
@@ -29,10 +31,6 @@ def meeLuisterFunction():
 
     # open home pagina
     driver.get("file:///opt/mycroft/skills/Homescreen/homescreen.html")
-
-class ClockForSchoolDieWantIi(MycroftSkill):
-        
-    meeLuisterFunction()
     
     
     def __init__(self):
@@ -46,6 +44,7 @@ class ClockForSchoolDieWantIi(MycroftSkill):
 
     #de functie die mycroft runt wanneer de gebruiker erom gevraagd heeft
     def handle_ii_want_die_school_for_clock(self, message):
+
         #Verteld de gebruiker na het activeren van clock command dat de klok op gaat starten
         self.speak_dialog('ii.want.die.school.for.clock')
 
