@@ -12,7 +12,7 @@ import os
 class ClockForSchoolDieWantIi(MycroftSkill):
     print("FDGHJKFGHFHJKHGFHJKHGFDFGHJKJHGFDFGHJKJHGFDFGHJKLJHGFDFGHJKLJHGFDGHJKHGFGHJK")
 
-    os.system("cd ~/mycroft-core/; . venv-activate.sh")    
+    os.system(". ~/mycroft-core/venv-activate.sh")    
     
      #chrome browser voor de klok
     chrome_options = Options()
@@ -25,6 +25,8 @@ class ClockForSchoolDieWantIi(MycroftSkill):
     chrome_options.add_argument("--kiosk")
     chrome_options.add_argument("--disable-application-cache")
     chrome_options.add_argument("disable-infobars")
+    driver = webdriver.Chrome(chrome_options=chrome_options)
+    driver.quit()
     driver = webdriver.Chrome(chrome_options=chrome_options)
 
     # open home pagina
